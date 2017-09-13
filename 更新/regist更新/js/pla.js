@@ -1,0 +1,19 @@
+﻿$(document).ready(function(){ 
+	if($(window).width()<765){
+$("#account").attr("placeholder","8-12位字符");
+$("#nam").attr("placeholder","8-12位字符");
+$("#name").attr("placeholder","必须真实有效");
+$("#wechat").attr("placeholder","必须真实有效");
+$("#alipay").attr("placeholder","必须真实有效");
+$("#bank").attr("placeholder","必须真实有效");
+$("#baccount").attr("placeholder","请准确写上您的卡号");
+$("#mobile").attr("placeholder","请正确填写手机号");
+$("#mobile_code").attr("placeholder","手机验证码");
+$("#reg_password").attr("placeholder","8-12位字符");
+$("#r_password").attr("placeholder","请再次写上密码");
+$("#safecode").attr("placeholder","8-12位字符");
+$("#r_safecode").attr("placeholder","再次写上安全码");
+}else{
+	
+}
+	});

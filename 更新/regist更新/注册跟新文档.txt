@@ -1,0 +1,6 @@
+增加
+regist.html页面;
+pla.js;
+修改
+log.css;(可以覆盖）
+log_style_m.css(可以覆盖）

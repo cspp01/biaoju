@@ -1,0 +1,5 @@
+增加
+lottery.html
+lottery.css(放在index_style.css下面)
+lottery.js
+【增加的图片】下的图片放到【images】文件夹下

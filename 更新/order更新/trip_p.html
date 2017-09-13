@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+</head>
+		<link />
+		<script type="text/javascript" src="jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<!--[if lt IE 9]> 
+	<script type="text/javascript" src="js/jquery-1.4.3.js" ></script>
+<![endif]-->
+		<!--<script type="text/javascript" src="js/p.js" ></script-->
+		<script type="text/javascript" src="js/scroll.js"></script>
+		<link rel="stylesheet" href="css/index_style.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="css/webuploader.css">
+<link rel="stylesheet" type="text/css" href="css/diyUpload.css">
+<link rel="stylesheet" type="text/css" href="css/order.css">
+	</head>
+	<style>
+*{ margin:0; padding:0;}
+#box{ margin:50px auto; width:540px; min-height:400px; background:#FF9}
+</style>
+	<body>
+		<div class="m">
+			<div class="top">
+				<div class="top1">
+					<div class="logo"><img src="images/index_logo.png"></div>
+				</div>
+			</div>
+		<div class="nav">
+			<div class="nav_1">
+				<ul>
+					<a href="index.html"><li class="li_1">主页</li></a>
+					<a href="info.html"><li class="li_2">江湖信息</li></a>
+					<a href="trip.html"><li class="li_3">押镖行程</li></a>
+					<a href="active.html"><li class="li_4">镖局信息</li></a>
+					<a href="bag.html"><li class="li_5">个人包裹</li></a>
+					<a href="help.html"><li class="li_6">江湖救急</li></a>
+					<a href="shitu.html"><li class="li_7">师徒关系</li></a>
+					<a href="../login/index.html"><li class="li_8">退出登录</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="nav1">
+			<ul>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+		              <li>恭喜账号为12321321321321的用户押镖成功，获益500&nbsp;<img src="images/yb.png"></li>
+			</ul>
+		</div>
+		<div class="pop">
+			<ul class="popp poppp">
+								<li class="bj_pop">
+									<ul>
+										<li>订单编号：123456789</li>
+										<li>订单日期：2016.8.1</li>
+										<li>订单金额：500 &nbsp;<img src="images/yb.png"></li>
+										<li>接镖人员：李先生</li>
+										<li>开户行：工商银行</li>
+										<li>银行卡号：9283821038210213129</li>
+										<li>支付宝账号：21312312</li>
+										<li>手机号：12312312</li>
+										<li>推荐人：李先生</li>
+										<li>推荐人电话：123123123</li>
+										
+									</ul>
+								</li>
+								<li class="bj_pop">
+									
+									<ul>
+										<li>
+											
+											<img src="images/104383117135506754.jpg">
+											
+</li>
+										<li><input type="file" size="30"/>
+<a class="button">重新上传</a>
+<a class="button">查看大图</a><h1>*仅支持jpg,gif,png等常见图片格式</h1></li>
+<li>
+	<li><a href="trip_po.html" class="button">返回订单</a></li>
+</li>
+
+										
+									</ul>
+						</ul>
+		</div>
+		
+		</div>
+		<!--增加代码 2016.9.20--><div class="pb2">
+		<div class="mainbg"></div>
+		<div class="opp">
+							
+			<img src="images/104383117135506754.jpg">
+							
+			<img class="coloseimg" src="images/close.png" >
+			
+		</div>
+		</div>
+	</body>
+</html>
+<!--增加代码 2016.9.20-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".pop ul.popp li.bj_pop:nth-child(2) ul li:nth-child(2) .button:nth-child(3)").click(function(){
+				$(".pb2").show();
+      	 	var h=$(".pb2 .opp img:nth-child(1)").height();
+		var w=$(".pb2 .opp img:nth-child(1)").width();
+		var wh=$(window).width();
+		var mop=$(".pb2 .opp img:nth-child(1)").css("marginTop");
+		var hh=$(window).height();
+			$(".pb2 .coloseimg").css({"margin-top":mop,"margin-left":(wh+w)*0.5-50});
+		
+		});
+		$(".pb2 .mainbg,.pb2 .coloseimg").click(function(){
+      	 	$(".pb2").hide();
+		});
+	});
+</script>
+<script>$(function(){
+	$("input[type=file]").change(function(){$(this).parents(".uploader").find(".filename").val($(this).val());});
+	$("input[type=file]").each(function(){
+	if($(this).val()==""){$(this).parents(".uploader").find(".filename").val("No file selected...");}
+	});
+});
+</script>
+<script>
+	$(".pop ul.popp li.bj_pop:nth-child(2) ul li:nth-child(2) input[type=file]").on("change", function(){ var files = !!this.files ? this.files : [];
+		if (!files.length || !window.FileReader) return;
+		if (/^image/.test( files[0].type)){
+			var reader = new FileReader();
+			reader.readAsDataURL(files[0]);
+			reader.onloadend = function(){
+				//   $("#uploadPreview").css("background-image", "url("+this.result+")");
+				$(".pop ul.popp li.bj_pop:nth-child(2) ul li:nth-child(1)").html("<img src='"+this.result+"'>");
+				$(".pb2 .opp img:nth-child(1)").attr("src",this.result);
+			}
+
+		}
+
+	});
+</script>
+<!--<script>
+setTimeout(function(){
+	window.location.href="trip_pp.html";
+},10000);
+</script>-->
+

@@ -1,0 +1,440 @@
+a{
+	text-decoration:underline;
+	color: #FFFFFF;
+	font-size: 14px;
+	width: 40px;
+	font-weight: 700;
+}
+body{
+	padding:0;
+	margin:0;
+    background: url("../images/log_background.jpg");
+   	background-repeat:no-repeat;
+    position:relative;
+    background-size: cover;
+}
+.log{
+	background: url("../images/log_bg.png");
+	background-size: cover;
+	height: 569px;
+	width: 625px;
+	position: relative;
+	top:10em;
+	left:22%;
+}
+.logo{
+position: relative;
+float:right;
+	margin:-28% 10% 0 0;
+	
+}
+.logo img{
+	width:594px;
+	height:386px;	
+}
+.log_form{
+	position: absolute;
+	top:118px;
+	left: 240px;
+}
+input{
+	background: #061e00;
+	height: 35px;
+	color: #FFFFFF;
+	border: 0;
+	height: 35px;
+	margin-top: 14px;
+	margin-bottom: 16px;
+}
+.input{
+	width:300px;
+}
+.img_verify{
+	position: absolute;
+	top: 170px;
+	left: 200px;
+	width: 100px;
+	height: 35px;
+	cursor: pointer;
+}
+#log_check{
+	color:#fff;
+	border:0px solid #000;
+	width:100%;
+	margin:auto 0;
+}
+.log_botton{
+	color: #000000;
+	background: url(../images/log_button.png);
+	float: left;
+	width: 130px;
+	height: 53px;
+	font-size: 25px;
+	font-weight: 900;
+	border:0px;
+	background-size: cover;
+	position:relative;
+	margin-left:130px;
+	margin-top:360px;
+}
+
+.mainbg{
+	width:100%;
+	height:100%;
+	background:#000;
+	z-index:120;
+	position:fixed;
+	top:0;
+	left:0;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+/*注册样式*/
+.bg{
+	display:none;
+}
+.bgp{
+	width:968px;
+	height:900px;
+	background:url(../images/reg_bg.png);
+	background-size: cover;
+	z-index:140;
+	margin: auto;
+	position: fixed;
+	top: -20px; left: 0; bottom: 0; right: 0;
+}
+.reg_h1{
+	position: relative;
+	margin: 10% 0 0 45%;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.bgp img{
+	position:relative;
+	margin:-20% 0 0 86%;
+	cursor:pointer;
+}
+.reg_table{
+	position: relative;
+	border-spacing:0px;
+	top: 0px;
+	margin:auto;
+	width:68%;
+	border:0px solid #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+/*响应式*/
+@media only screen and (max-width:1800px){
+	.reg_table{
+		border-spacing:4px;
+		font-size: 18px;
+	}
+	.bgp{
+		width:900px;
+		height:860px;
+	 	top: -20px; left: 0; bottom: 0; right: 0;
+	}
+	.bgp img{
+		width:36px;
+		height:36px;
+	}
+	.reg_table{
+		border-spacing:1px;
+	}
+}
+@media only screen and (max-width:1700px){
+	.log{
+		height: 500px;
+		width: 550px;
+	}
+	.reg_table{
+		border-spacing:2px;
+	}
+	.log_form{
+		top:108px;
+		left: 210px;
+	}
+	input{
+		height: 36px;
+		margin-top:8px;
+		margin-bottom: 12px;
+	}
+	#log_check{
+		font-size:14px;
+		width:120px;
+		margin:0 0;
+	}
+	.input{
+		width:280px;
+	}
+	.txt_verify{
+		width: 130px;
+	}
+	.img_verify{
+		position: absolute;
+		top: 145px;
+		left: 180px;
+		width: 100px;
+		height: 36px;
+	}
+	#reset{
+		margin-left: 130px;
+	}
+	.log_botton{
+		width: 100px;
+		height: 40px;
+		font-size: 18px;
+		position:relative;
+		margin-left:120px;
+		margin-top:330px;
+	}
+	.logo{
+		position: relative;
+		float:right;
+		margin:-28% 18% 0 0;
+	}
+	.logo img{
+		width:300px;
+		height:368px;	
+	}
+}
+@media only screen and (max-width:1600px){
+	.reg_table{
+		border-spacing:4px;
+		font-size: 16px;
+	}
+	.bgp img{
+		width:33px;
+		height:33px;
+	}
+}
+.reg_table input{
+	color: #000000;
+	background: #FFFFFF;
+	height: 25px;
+	margin-top:0px;
+}
+.reg_table .reg_button{
+	background: url(../images/reg_button.png);
+	width: 93px;
+	height: 35px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top:0px;
+}
+#reset{
+	margin-left: 215px;
+}
+.txt_verify{
+	width: 170px;
+}
+@media only screen and (max-width:1400px){
+	.log{
+		height: 379px;
+		width: 416px;
+	}
+	.log_form{
+		top:80px;
+		left: 160px;
+	}
+	input{
+		height: 30px;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+	#log_check{
+		font-size:12px;
+		margin:0 0;
+	}
+	.input{
+		width:200px;
+	}
+	.txt_verify{
+		width: 90px;
+	}
+	.img_verify{
+		position: absolute;
+		top: 110px;
+		left: 100px;
+		width: 100px;
+		height: 30px;
+	}
+	#reset{
+		margin-left: 130px;
+	}
+	.log_botton{
+		width: 80px;
+		height: 30px;
+		font-size: 16px;
+		margin-left:80px; ;
+	}
+	.log_botton{
+		position:relative;
+		margin-left:80px;
+		margin-top:248px;
+	}
+	.bgp{
+		width:800px;
+		height:610px;
+		margin: auto;
+		position: fixed;
+		top: -80px; left: 0; bottom: 0; right: 0;
+	}
+	.reg_table{
+		border-spacing:0px;
+		margin-top: 100px;
+		margin: auto;
+		font-size: 10px;
+	}
+	.reg_h1{
+		margin: 80px 0 0 360px;
+		font-size: 1em;
+		z-index:200;
+	}
+	.reg_table .reg_button{
+		width: 93px;
+		height: 35px;
+		font-size: 14px;
+		font-weight: bold;
+		margin:10px 0 0 0;
+	}
+	.bgp img{
+		width:26px;
+		height:26px;
+		margin:-100% 0 0 86%;
+		z-index:1000;
+	}
+	.logo{
+		position: relative;
+		float:right;
+		margin:-24% 18% 0 0;	
+	}
+	.logo img{
+		width:350px;
+		height:218px;	
+	}
+}
+@media (max-width: 1000px) {
+	body{
+		width:100%;
+		height:100%;
+    background-size:auto 400%;
+    background-position: top center;
+	}
+	.log{
+	height: 700px;
+	width: 940px;
+	position: relative;
+	top:40em;
+	left:2%;
+}
+.logo{
+position: relative;
+float:right;
+	margin:-55% 30% 0 0;
+	
+}
+.logo img{
+	width:350px;
+	height:450px;	
+}
+.log_form{
+		top:168px;
+			left: 350px;
+	}
+	input{
+	height: 80px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	}
+	#log_check{
+		font-size:12px;
+		margin:0 0;
+	}
+	.input{
+		width:480px;
+		font-size: 30px;
+	}
+	.txt_verify{
+	width: 240px;
+}
+	.img_verify{
+	position: absolute;
+	top: 245px;
+	left: 275px;
+	width: 200px;
+	height: 80px;
+}
+.log_botton{
+	width: 220px;
+	height: 80px;
+	font-size: 40px;
+	font-weight: bold;
+	margin-left:80px; ;
+}
+.log_botton{
+	position:relative;
+	margin-left:160px;
+	margin-top:570px;
+}
+#reset{
+	margin-left: 300px;
+	font-size: 30px;
+}
+#log_check{
+		font-size:28px;
+		width:300px;
+		margin:0 0 8px 0;
+		border:0px solid #000;
+	}
+	.bgp{
+	width:1080px;
+	height:2000px;
+	margin: 0 0 0 -140px;
+  position: fixed;
+  top: -180px; left: 0; bottom: 0; right: 0;
+}
+.reg_table{
+	border-spacing:8px;
+	border:1px solid #000;
+	width:800px;
+	margin-top: 500px;
+	margin: 40px 0 0 240px;
+	font-size: 26px;
+	font-weight: bold;
+	overflow:auto;
+}
+.reg_table input{
+	width: 240px;
+	height: 50px;
+	font-size:20px;
+	font-weight: bold;
+}
+.reg_table .reg_button{
+	width: 200px;
+	height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	margin:10px 0 0 0;
+}
+.reg_table tr{
+	height: 50px;
+}
+.reg_table input#zphone{
+	width:200px;
+	
+}
+.reg_h1{
+	margin: 240px 0 0 500px;
+	font-size: 40px;
+}
+.bgp img{
+	width: 50px;
+	height:50px;
+	margin:-100% 0 0 90%;
+}
+	
+}

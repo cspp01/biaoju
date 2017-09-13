@@ -1,0 +1,56 @@
+font#label1account{color:#999;}
+font#label2account{display:none;color:#FF0000;}
+font#label3account{display:none;color:#FF0000;}
+font#label4account{display:none;color:#12bd12;}
+font#label5{color:#999;}
+font#label6{display:none;color:#FF0000;}
+font#label8{display:none;color:#12bd12;}
+font#label9{color:#999;}
+font#label10{display:none;color:#FF0000;}
+font#labelp{display:none;color:#12bd12;}
+font#label12{color:#999;}
+font#label13{display:none;color:#FF0000;}
+font#label14{display:none;color:#12bd12;}
+font#label16{display:none;color:#FF0000;}
+font#label18{display:none;color:#FF0000;}
+font#label19{display:none;color:#12bd12;}
+font#labela{color:#999;}
+font#labelb{display:none;color:#FF0000;}
+font#labelc{display:none;color:#12bd12;}
+font#labelabank{color:#999;}
+font#labelbbank{display:none;color:#FF0000;}
+font#labelcbank{display:none;color:#12bd12;}
+font#label1reg_password{color:#999;}
+font#label2reg_password{display:none;color:#FF0000;}
+font#label3reg_password{display:none;color:#FF0000;}
+font#label4reg_password{display:none;color:#12bd12;}
+font#label1safecode{color:#999;}
+font#label2safecode{display:none;color:#FF0000;}
+font#label3safecode{display:none;color:#FF0000;}
+font#label4safecode{display:none;color:#12bd12;}
+font#label1r_password{color:#999;}
+font#label2r_password{display:none;color:#FF0000;}
+font#label3r_password{display:none;color:#FF0000;}
+font#label4r_password{display:none;color:#12bd12;}
+font#label1baccount{color:#999;}
+font#label2baccount{display:none;color:#FF0000;}
+font#label3baccount{display:none;color:#FF0000;}
+font#label4baccount{display:none;color:#12bd12;}
+font#label1nam{color:#999;}
+font#label2nam{display:none;color:#FF0000;}
+font#label3nam{display:none;color:#FF0000;}
+font#label4nam{display:none;color:#12bd12;}
+font#label1r_safecode{color:#999;}
+font#label100{color:#999;}
+font#labelbmobile_code1{color:#999;}
+font#label2r_safecode{display:none;color:#FF0000;}
+font#label3r_safecode{display:none;color:#FF0000;}
+font#label4r_safecode{display:none;color:#12bd12;}
+font#labelbmobile_code{display:none;color:#FF0000;}
+font{
+	float:right;
+	border:0px solid #000;
+}
+table.reg_table td{
+	border:0px solid red;
+}

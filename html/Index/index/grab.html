@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>抢单大厅</title>
+		<link />
+		<script type="text/javascript" src="../../../js/jquery.js" ></script>
+		<script type="text/javascript" src="../../../js/jquery.min.js" ></script>
+		<!--[if lt IE 9]> 
+	<script type="text/javascript" src="../../../js/jquery-1.4.3.js" ></script>
+<![endif]-->
+		<script type="text/javascript" src="../../../js/scroll.js"></script>
+		<script type="text/javascript" src="../../../js/p.js"></script>
+		<link rel="stylesheet" href="../../../css/index_style.css" media="all"/>
+		<script type="text/javascript">
+
+var intDiff = parseInt(7200);//倒计时总秒数量
+
+function timer(intDiff){
+	window.setInterval(function(){
+	var day=0,
+		hour=0,
+		minute=0,
+		second=0;//时间默认值	
+		intDiff--;
+	if(intDiff > 0){
+		day = Math.floor(intDiff / (60 * 60 * 24));
+		hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+		minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+		second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+	}
+	if (minute <= 9) minute = '0' + minute;
+	if (second <= 9) second = '0' + second;
+	if(hour<=9) hour = '0' + hour;
+	$('#day_show').html(day);
+	$('#hour_show').html(hour);
+	$('#minute_show').html(minute);
+	$('#second_show').html(second);
+	
+	}, 1000);
+} 
+
+$(function(){
+	timer(intDiff);
+});	
+</script>
+	</head>
+	<body>
+		<div class="m">
+			<div class="top">
+				<div class="top1">
+					<div class="logo"><img src="../../../images/index_logo.png"></div>
+				</div>
+			</div>
+		<div class="nav">
+			<div class="nav_1">
+				<ul>
+					<a href="../index.html"><li class="li_1">主页</li></a>
+					<a href="../info.html"><li class="li_2">江湖信息</li></a>
+					<a href="../trip.html"><li class="li_3">押镖行程</li></a>
+					<a href="../active.html"><li class="li_4">镖局信息</li></a>
+					<a href="../bag.html"><li class="li_5">个人包裹</li></a>
+					<a href="../help.html"><li class="li_6">江湖救急</li></a>
+					<a href="../shitu.html"><li class="li_7">师徒关系</li></a>
+					<a href="../../login/index.html"><li class="li_8">退出登录</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="nav1">
+			<ul>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+				<li>恭喜账号为12321321321321的用户押镖成功，获益500<img src=""></li>
+			</ul>
+		</div>
+		<div class="main_grab">
+			<div class="u1">
+				<ul>
+								<li><img src="../../../images/grab_pp.png"><img src="../../../images/grab_p.png"><strong id="second_show">60</strong></li>
+								<li>
+									<strong id="hour_show">02</strong>&nbsp;
+	<strong id="minute_show">00</strong></li>
+							</ul>
+			</div>
+				<div class="u2">
+					
+					<ul>
+						<li>
+							<ul>
+								<li>订单</li>
+								<li>金额</li>
+								<li>状态</li>
+								<li>结果</li>
+								<li></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>未抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="支付" class="pay"> </li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>未抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="抢单" class="grab"> </li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>未抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="支付"> </li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>未抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="抢单"> </li>
+							</ul>
+						</li><li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>以抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="支付"> </li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>未抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="抢单"> </li>
+							</ul>
+						</li><li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>以抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="支付"> </li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>未抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="抢单"> </li>
+							</ul>
+						</li><li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>以抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="支付"> </li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>123123123123</li>
+								<li>5000<img src="../../../images/yb.png"></li>
+								<li>未抢单</li>
+								<li>未支付</li>
+								<li><input type="button" value="抢单"> </li>
+							</ul>
+						</li>
+						<li class="la">
+							<input type="button" value="首页">
+								<a href="#"><</a>
+									<a href="#">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">...</a>
+									<a href="#">></a>
+								
+									<input type="button" value="末页">
+						</li>
+					</ul>
+				
+		</div>
+		</div>
+
+			<div class="pb">
+		<div class="mainbg"></div>
+		<div class="pop">
+			<ul class="popp">
+								<li class="bj_pop">
+									<ul>
+										<li>订单编号：123456789</li>
+										<li>订单日期：2016.8.1</li>
+										<li>订单金额：500 &nbsp;<img src="../../../images/yb.png"></li>
+										<li>接镖人员：李先生</li>
+										<li>开户行：工商银行</li>
+										<li>银行卡号：9283821038210213129</li>
+										<li>支付宝账号：21312312</li>
+										<li>手机号：12312312</li>
+										
+										<li>推荐人：李先生</li>
+										<li>推荐人电话：123123123</li>
+										<li>倒计时：（<b><strong id="hour_show">02</strong>:
+	<strong id="minute_show">00</strong></b>）</li>
+										<li>（请您在2小时内支付对方订单金额，超时，订单作废并扣除相应费用）</li>
+										
+									</ul>
+								</li>
+								<li class="bj_pop">
+									
+									<ul>
+										<li>
+											
+											<img src="../../../images/blo_ppp.png">
+											
+</li>
+										<li><input type="file" size="30"/>
+<input type="button" name="file" class="button" value="上传图片"/><h1>*仅支持jpg,gif,png等常见图片格式</h1></li>
+
+										<li><input type="submit" value="确定支付" id="pa"><input type="submit" value="拒绝支付"></li>
+									</ul>
+								</li>
+						</ul>
+							
+							
+								<ul class="popp">
+								<li class="bj_pop">
+									<ul>
+										<li>订单编号：123456789</li>
+										<li>订单日期：2016.8.1</li>
+										<li>订单金额：500 &nbsp;<img src="../../../images/yb.png"></li>
+										<li>接镖人员：李先生</li>
+										<li>开户行：工商银行</li>
+										<li>银行卡号：9283821038210213129</li>
+										<li>支付宝账号：21312312</li>
+										<li>手机号：12312312</li>
+										<li>推荐人：李先生</li>
+										<li>推荐人电话：123123123</li>
+										<li>订单状态：（<b>已发送订单成功</b>）</li>
+										<li>（您已经发送订单，假订单图片发送错误可重新发送，不会再次扣除费用）</li>
+										
+									</ul>
+								</li>
+								<li class="bj_pop">
+									
+									<ul>
+										<li>
+											
+											<img src="../../../images/blo_ppp.png">
+											
+</li>
+										<li><input type="file" size="30"/>
+<input type="button" name="file" class="button" value="上传图片"/><h1>*仅支持jpg,gif,png等常见图片格式</h1></li>
+
+										<li><input type="submit" value="重发图片"></li>
+									</ul>
+								</li>
+						</ul>
+							
+							<!--对方已经确定，-->
+								<ul class="popp">
+								<li class="bj_pop">
+									<ul>
+										<li>订单编号：123456789</li>
+										<li>订单日期：2016.8.1</li>
+										<li>订单金额：500 &nbsp;<img src="../../../images/yb.png"></li>
+										<li>接镖人员：李先生</li>
+										<li>开户行：工商银行</li>
+										
+										<li>银行卡号：9283821038210213129</li>
+										<li>支付宝账号：21312312</li>
+										<li>手机号：12312312</li>
+										<li>推荐人：李先生</li>
+										<li>推荐人电话：123123123</li>
+										<li>订单状态：（<b>已成功</b>）</li>
+								
+										
+									</ul>
+								</li>
+								<li class="bj_pop">
+									
+									<ul>
+										<li class="no">
+											
+											
+</li>
+										<li></li>
+
+										<li><input type="submit" value="交易成功"></li>
+									</ul>
+								</li>
+						</ul>
+							<a href="#"><img class="colose" src="../../../images/close.png" ></a>
+			
+			
+		</div>
+		</div>
+		<div class="pb1">
+		<div class="mainbg"></div>
+		<div class="bj_p">
+			<a href="#"><img src="../../../images/close.png" class="colose"></a> 
+			<ul>
+					<li>
+						<img src="../../../images/p_l.png">(8)
+					</li>
+					
+					<li>
+						本次抢单需要消耗镖令（<b>1</b>）个
+					</li>
+					<li>
+						<input type="submit" value="确认抢单"  onclick="bj_p()"/>
+					</li>
+				</ul>
+				
+							
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if(navigator.userAgent.indexOf("MSIE 8.0")>0){
+			$(".pay").click(function(){
+      	 	$(".pb").show();
+      	 	$(".pop ul.popp:nth-child(2)").hide();
+      	 	$(".pop ul.popp:nth-child(1)").show();
+      	 	$(".pop ul.popp:nth-child(3)").hide();
+		});
+		$(".grab").click(function(){
+      	 	$(".pb1").show();
+      	 
+		});
+		$(".mainbg").click(function(){
+	    	$(".pb").hide();
+	    	$(".pb1").hide();
+		});
+		$("img.colose").click(function(){
+	    	$(".pb").hide();
+	    	$(".pb1").hide();
+		});
+		$(".bj_p input[type=submit]").click(function(){
+			$(".pb1").hide();
+      	 	$(".pb").show();
+      	 	$(".pop ul.popp:nth-child(2)").hide();
+      	 	$(".pop ul.popp:nth-child(1)").show();
+      	 	$(".pop ul.popp:nth-child(3)").hide();
+		});
+		$(".pop input[type=submit]:nth-child(1)").click(function(){
+			$(".pb").show();
+	    	$(".pb1").hide();
+		});
+		$(".pop input[type=submit]#pa").click(function(){
+			$(".pop ul.popp:nth-child(1)").hide();
+      	 	$(".pop ul.popp:nth-child(2)").show();
+      	 	$(".pop ul.popp:nth-child(3)").hide();
+		});
+		$(".pop input[type=submit]#pa").click(
+			function(){
+				setTimeout(function(){
+	$(".pop ul.popp:nth-child(1)").hide();
+      	 	$(".pop ul.popp:nth-child(3)").show();
+      	 	$(".pop ul.popp:nth-child(2)").hide();
+},1000);
+});
+	
+	
+		$("[type=button]").mouseover(function () {
+			$("[type=button]").css("cursor","pointer");
+		});
+		}else{
+		$(".pay").click(function(){
+      	 	$(".pb").show();
+      	 	$(".pop ul.popp:nth-of-type(2)").hide();
+      	 	$(".pop ul.popp:nth-of-type(1)").show();
+      	 	$(".pop ul.popp:nth-of-type(3)").hide();
+		});
+		$(".grab").click(function(){
+      	 	$(".pb1").show();
+      	 
+		});
+		$(".mainbg").click(function(){
+	    	$(".pb").hide();
+	    	$(".pb1").hide();
+		});
+		$("img.colose").click(function(){
+	    	$(".pb").hide();
+	    	$(".pb1").hide();
+		});
+		$(".bj_p input[type=submit]").click(function(){
+			$(".pb1").hide();
+      	 	$(".pb").show();
+      	 	$(".pop ul.popp:nth-of-type(2)").hide();
+      	 	$(".pop ul.popp:nth-of-type(1)").show();
+      	 	$(".pop ul.popp:nth-of-type(3)").hide();
+		});
+		$(".pop input[type=submit]:nth-child(1)").click(function(){
+			$(".pb").show();
+	    	$(".pb1").hide();
+		});
+		$(".pop input[type=submit]#pa").click(function(){
+			$(".pop ul.popp:nth-of-type(1)").hide();
+      	 	$(".pop ul.popp:nth-of-type(2)").show();
+      	 	$(".pop ul.popp:nth-of-type(3)").hide();
+		});
+		$(".pop input[type=submit]#pa").click(
+			function(){
+				setTimeout(function(){
+	$(".pop ul.popp:nth-of-type(1)").hide();
+      	 	$(".pop ul.popp:nth-of-type(3)").show();
+      	 	$(".pop ul.popp:nth-of-type(2)").hide();
+},1000);
+});
+	
+	
+		$("[type=button]").mouseover(function () {
+			$("[type=button]").css("cursor","pointer");
+		});
+		}
+	});
+</script>
+<script>
+$(".pop ul.popp li.bj_pop:nth-child(2) ul li:nth-child(2) input[type=file]").on("change", function(){ var files = !!this.files ? this.files : [];
+		    if (!files.length || !window.FileReader) return;
+		    if (/^image/.test( files[0].type)){
+		        var reader = new FileReader();  
+		        reader.readAsDataURL(files[0]);
+		        reader.onloadend = function(){
+		    //   $("#uploadPreview").css("background-image", "url("+this.result+")");
+		        $(".pop ul.popp li.bj_pop:nth-child(2) ul li:nth-child(1)").html("<img src='"+this.result+"'>");
+		        }
+		 
+		    }
+		 
+		});
+</script>

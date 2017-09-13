@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../../css/log_style_m.css" rel="stylesheet" type="text/css" media="all"/>
+		<link href="../../css/log.css" rel="stylesheet" type="text/css" media="all"/>
+		<script type="text/javascript" src="../../js/jquery.js" ></script>
+		<script type="text/javascript" src="../../js/main.js" ></script>
+		<script type="text/javascript" src="../../js/pla.js" ></script>
+
+	</head>
+	<body>
+		<div>
+	<div class="bg">
+		<div class="bgp">
+			<div class="logo"><img src="../../images/p_bg.png"></div>
+			<h1 class="reg_h1">新用户注册</h1>
+				<table class="reg_table">
+					<tr>
+						<td>注册账号</td>
+						<td>
+							<input type="text" id="account" name="account" onblur="jieshou('account',12,8)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1account" ><span class="pc">(8-12位字符)</span><span class="ip"></span></font>
+							<font id ="label2account" ><span class="pc">帐号不能为空</span><span class="ip">&times;</span></font>
+							<font id="label3account"><span class="pc">昵称不符合要求</span><span class="ip">&times;</span></font>
+							<font id ="label4account" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>昵称</td>
+						<td>
+							<input type="text" id="nam" name="account" onblur="jieshou('nam',12,8)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1nam" ><span class="pc">(8-12位字符)</span><span class="ip"></span></font>
+							<font id ="label2nam" ><span class="pc">昵称不能为空</span><span class="ip">&times;</span></font>
+							<font id="label3nam"><span class="pc">昵称不符合要求</span><span class="ip">&times;</span></font>
+							<font id ="label4nam" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>真实姓名</td>
+						<td>
+							<input type="text" id="name" name="name" onblur="jieshou0()"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="label5"><span class="pc">(必须真实有效)</span><span class="ip"></span></font>
+							<font id="label6"><span class="pc">名字不能为空</span><span class="ip">&times;</span></font>
+							<font id ="label8" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>微信号</td>
+						<td>
+							<input type="text" id="wechat" name="wechat" onblur="jieshou2()"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="label9"><span class="pc">(必须真实有效)</span><span class="ip"></span></font>
+							<font id="label10"><span class="pc">微信号不能为空</span><span class="ip">&times;</span></font>
+							<font id ="labelp" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>支付宝号</td>
+						<td>
+							<input type="text" id="alipay" name="alipay" onblur="jieshou4()"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="label12"><span class="pc">(必须真实有效)</span><span class="ip"></span></font>
+							<font id="label13"><span class="pc">支付宝号不能为空</span><span class="ip">&times;</span></font>
+							<font id ="label14" ><span class="pc">正确<</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>开户行</td>
+						<td><input type="text" id="bank" name="alipay" onblur="jieshoua('bank')"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="labelabank"><span class="pc">(必须真实有效)</span><span class="ip"></span></font>
+							<font id="labelbbank"><span class="pc">开户行不能为空</span><span class="ip">&times;</span></font>
+							<font id ="labelcbank" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>银行卡号</td>
+						<td>
+							<input type="text" id="baccount" name="alipay"onblur="jieshoup('baccount')"  onkeyup="formatBankNo(this)" onkeydown="formatBankNo(this)"/>
+							<span style="color:#FF0000">*</span>
+							<font id ="label1baccount" ><span class="pc">(请准确写上您的卡号)</span><span class="ip"></span></font>
+							<font id ="label2baccount" ><span class="pc">卡号不能为空</span><span class="ip">&times;</span></font>
+							<font id="label3baccount"><span class="pc">卡号不不符合</span><span class="ip">&times;</span></font>
+							<font id ="label4baccount" ><span class="pc">正确<</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>手机号</td>
+						<td>
+							<input type="text" id="mobile" name="mobile" onblur="phonetext()"onkeyup="formatPhone(this)" onkeydown="formatPhone(this)"/>
+							<span style="color:#FF0000">*</span>
+							<font id="label100"><span class="pc">(请正确填写手机号)</span><span class="ip"></span></font>
+							<font id="label16"><span class="pc">手机号格式不正确</span><span class="ip">&times;</span></font>
+							<font id="label18"><span class="pc">手机号不能为空</span><span class="ip">&times;</span></font>
+							<font id ="label19" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>	
+					</tr>
+					<tr>
+						<td>验证码</td>
+						<td>
+							<input type="text" id="mobile_code" onblur="jieshouaa('mobile_code')"/>
+							<a id="zphone" type="button"  onClick="get_mobile_code();">获取验证码</a>
+							<span style="color:#FF0000">*</span>
+							<font id="labelbmobile_code"><span class="pc">验证码不能为空</span><span class="ip">&times;</span></font>
+							<font id="labelbmobile_code1"><span class="pc">填写你收到的验证码</span><span class="ip"></span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>登录密码</td>
+						<td>
+							<input type="password" id="reg_password" name="password"onblur="jieshou('reg_password',12,8)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1reg_password" ><span class="pc">(8-12位字符)</span><span class="ip"></span></font>
+							<font id ="label2reg_password" ><span class="pc">密码不能为空</span><span class="ip">&times;</span></font>
+							<font id="label3reg_password"><span class="pc">密码不不符合</span><span class="ip">&times;</span></font>
+							<font id ="label4reg_password" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>确认密码</td>
+						<td>
+							<input type="password" id="r_password"onblur="jieshoub('r_password')"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1r_password" ><span class="pc">(请再次写上密码)</span><span class="ip"></span></font>
+							<font id ="label2r_password" ><span class="pc">确认密码不能为空</span><span class="ip">&times;</span></font>
+							<font id="label3r_password"><span class="pc">两次密码不一样</span><span class="ip">&times;</span></font>
+							<font id ="label4r_password" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>安全码</td>
+						<td><input type="password" id="safecode" name="safecode"onblur="jieshou('safecode',6,6)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1safecode" ><span class="pc">(6位数字)</span><span class="ip"></span></font>
+							<font id ="label2safecode" ><span class="pc">安全码不能为空</span><span class="ip">&times;</span></font>
+							<font id="label3safecode"><span class="pc">安全码不不符合</span><span class="ip">&times;</span></font>
+							<font id ="label4safecode" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>确认安全码</td>
+						<td><input type="password" id="r_safecode"onblur="jieshoub('r_safecode')"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1r_safecode" ><span class="pc">(再次写上安全码)</span><span class="ip"></span></font>
+							<font id ="label2r_safecode" ><span class="pc">确认安全码不能为空</span><span class="ip">&times;</span></font>
+							<font id="label3r_safecode"><span class="pc">两次安全码不一样</span><span class="ip">&times;</span></font>
+							<font id ="label4r_safecode" ><span class="pc">正确</span><span class="ip">&radic;</span></font>
+						</td>
+					</tr>
+					<tr>
+						<td>推荐人</td>
+						<td>
+							<input type="text" id="refer_account" name="refer_account" value=""/>
+							<span style="color:#FF0000"> </span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><a class="reg_button" type="button"  onclick="send()"/>注册</a>&nbsp;<a href="index.html" class="log_button" type="button"  onclick=""/>返回登录</a><br>带（<span style="color:#FF0000"> *</span>）必填</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="user-scalable=no">
+		<title>用户登录</title>
+		<link href="../../css/log_style.css" rel="stylesheet" type="text/css" media="all"/>
+		<link href="../../css/log.css" rel="stylesheet" type="text/css" media="all"/>
+		<link rel="stylesheet" href="../../css/style.css" />
+		<script type="text/javascript" src="../../js/jquery.js" ></script>
+		<script type="text/javascript" src="../../js/jquery.min.js" ></script>
+		<script type="text/javascript" src="../../js/main.js" ></script>
+		<!--[if lt IE 9]> 
+	<script type="text/javascript" src="../../js/jquery-1.4.3.js" ></script>
+<![endif]-->
+	</head>
+	<body>
+		<div class=maim>
+			<div class="log">
+				<div class="log_form">
+					<div id="log_check">密码错误</div>
+					<div><input class="input" id="username" placeholder="    登录账户\手机号"/></div>
+					<div><input class="input"  id="log_password" type="password" placeholder="    请输入登录密码"/></div>
+					<div>
+						<input class="txt_verify" id="verify" type="text" name="verify"/>
+						<img class="img_verify" src="../../images/timg.jpg" onclick="this.src='__URL__/verify/id/'+Math.random()"/>
+					</div>
+					<div><a id="reset" href="#"></a></div>
+				</div>
+				<div>
+					<input class="log_botton" onclick="login()" type="button" value="登录"/>
+					<input id="reg_button" class="log_botton" type="button" value="注册"/>
+				</div>
+			</div>
+			<div class="logo">
+				<img src="../../images/logo.png">
+			</div>
+		</div>
+	<div class="bg">
+		<div class="mainbg"></div>
+		<div class="bgp">
+			<h1 class="reg_h1">新用户注册</h1>
+			<a href="#"><img src="../../images/close.png" ></a>
+				<table class="reg_table">
+					<tr>
+						<td>注册账号：</td>
+						<td>
+							<input type="text" id="account" name="account" onblur="jieshou('account',12,8)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1account" >(8-12位字符)</font>
+							<font id ="label2account" >帐号不能为空</font>
+							<font id="label3account">昵称不符合要求</font>
+							<font id ="label4account" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>昵称：</td>
+						<td>
+							<input type="text" id="nam" name="account" onblur="jieshou('nam',12,8)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1nam" >(8-12位字符)</font>
+							<font id ="label2nam" >昵称不能为空</font>
+							<font id="label3nam">昵称不符合要求</font>
+							<font id ="label4nam" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>真实姓名：</td>
+						<td>
+							<input type="text" id="name" name="name" onblur="jieshou0()"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="label5">(必须真实有效)</font>
+							<font id="label6">名字不能为空</font>
+							<font id ="label8" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>微信号：</td>
+						<td>
+							<input type="text" id="wechat" name="wechat" onblur="jieshou2()"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="label9">(必须真实有效)</font>
+							<font id="label10">微信号不能为空</font>
+							<font id ="labelp" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>支付宝号：</td>
+						<td>
+							<input type="text" id="alipay" name="alipay" onblur="jieshou4()"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="label12">(必须真实有效)</font>
+							<font id="label13">支付宝号不能为空</font>
+							<font id ="label14" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>开户行：</td>
+						<td><input type="text" id="bank" name="alipay" onblur="jieshoua('bank')"/>
+							<span style="color:#FF0000"> *</span>
+							<font id="labelabank">(必须真实有效)</font>
+							<font id="labelbbank">开户行不能为空</font>
+							<font id ="labelcbank" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>银行卡号：</td>
+						<td>
+							<input type="text" id="baccount" name="alipay"onblur="jieshoup('baccount')"  onkeyup="formatBankNo(this)" onkeydown="formatBankNo(this)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1baccount" >请准确写上您的卡号</font>
+							<font id ="label2baccount" >卡号不能为空</font>
+							<font id="label3baccount">卡号不不符合</font>
+							<font id ="label4baccount" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>手机号：</td>
+						<td>
+							<input type="text" id="mobile" name="mobile" onblur="phonetext()"onkeyup="formatPhone(this)" onkeydown="formatPhone(this)"/>
+							<span style="color:#FF0000">*</span>
+							<font id="label16">手机号格式不正确</font>
+							<font id="label18">手机号不能为空</font>
+							<font id ="label19" >正确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+						</td>	
+					</tr>
+					<tr>
+						<td>验证码：</td>
+						<td>
+							<input type="text" id="mobile_code" onblur="jieshouaa('mobile_code')"/>
+							<input id="zphone" type="button" value=" 获取验证码 " onClick="get_mobile_code();">
+							<font id="labelbmobile_code">验证码不能为空</font>
+						</td>
+					</tr>
+					<tr>
+						<td>登录密码：</td>
+						<td>
+							<input type="password" id="reg_password" name="password"onblur="jieshou('reg_password',12,8)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1reg_password" >(8-12位字符)</font>
+							<font id ="label2reg_password" >密码不能为空</font>
+							<font id="label3reg_password">密码不不符合</font>
+							<font id ="label4reg_password" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>确认密码：</td>
+						<td>
+							<input type="password" id="r_password"onblur="jieshoub('r_password')"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1r_password" >(请再次写上密码)</font>
+							<font id ="label2r_password" >确认密码不能为空</font>
+							<font id="label3r_password">两次密码不一样</font>
+							<font id ="label4r_password" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>安全码：</td>
+						<td><input type="password" id="safecode" name="safecode"onblur="jieshou('safecode',6,6)"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1safecode" >(6位数字)</font>
+							<font id ="label2safecode" >安全码不能为空</font>
+							<font id="label3safecode">安全码不不符合</font>
+							<font id ="label4safecode" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>确认安全码：</td>
+						<td><input type="password" id="r_safecode"onblur="jieshoub('r_safecode')"/>
+							<span style="color:#FF0000"> *</span>
+							<font id ="label1r_safecode" >(再次写上安全码)</font>
+							<font id ="label2r_safecode" >确认安全码不能为空</font>
+							<font id="label3r_safecode">两次安全码不一样</font>
+							<font id ="label4r_safecode" >正确</font>
+						</td>
+					</tr>
+					<tr>
+						<td>推荐人：</td>
+						<td>
+							<input type="text" id="refer_account" name="refer_account" value=""/>
+							<span style="color:#FF0000"> </span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">带（<span style="color:#FF0000"> *</span>）必填&nbsp;<input class="reg_button" type="button" value="注册"  onclick="send()"/></td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#reg_button").click(function(){
+	    	location.href = 'regist.html';
+		});
+	});
+	function login(){
+		window.location.href="../Index/index.html";
+			var username=$("#username").val();
+			var password=$("#log_password").val();
+			var verify=$("#verify").val();
+			$.ajax({
+				type:"post",
+				url:"__URL__/check",
+				async:true,
+				data:"account="+username+"&password="+password+"&verify="+verify,
+				dataType:"text",
+				success:function(re){
+					if(re>0){
+						location.href="__APP__/home/index/index/id/"+re;	
+					}else{
+						window.location.href="../Index/index.html";
+					}
+				}
+			});
+	}
+</script>
+<script type="application/x-javascript"> 
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if($(window).width()<1000){
+		$("tr td input[type=password],tr:nth-child(14) td input,tr:nth-child(8) td input,tr:nth-child(9) td input").focus(function(){
+			$(".bgp").css("top","-600px");
+		});
+		$("td input").blur(function(){
+			$(".bgp").css("top","-180px");
+		});}
+	});
+</script>
